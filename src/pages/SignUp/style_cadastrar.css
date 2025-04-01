@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('/src/imgs/BackgroundSignForget.png');
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.logo {
+    margin-top: 20px;
+    width: 120px; /* Ajuste conforme necessário */
+    height: auto;
+}
+
+.cadastro-container {
+    background: linear-gradient(to bottom, #ffcc00, #ff6600); 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(92, 51, 51, 0.5);
+    text-align: center;
+    width: 400px;
+    margin-top: 40px; /* Distância do topo */
+}
+
+h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background: #f7f3f3;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.input-group i {
+    color: white;
+    margin-right: 10px;
+}
+
+.input-group input {
+    border: none;
+    background: transparent;
+    outline: none;
+    color: rgb(0, 0, 0);
+    width: 100%;
+}
+
+::placeholder {
+    color: rgba(15, 6, 6, 0.7);
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #ff6600;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #cc5200;
+}
+
+.login-text {
+    margin-top: 15px;
+    color: white;
+}
+
+.login-text a {
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-text a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 600px) {
+    .cadastro-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .logo {
+        width: 100px; 
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 14px;
+    }
+}

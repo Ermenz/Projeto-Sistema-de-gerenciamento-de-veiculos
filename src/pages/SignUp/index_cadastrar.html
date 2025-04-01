@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Cadastro</title>
+    <link rel="stylesheet" href="/src/pages/SignUp/style_cadastrar.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="cadastro-container">
+        <h2>Cadastro</h2>
+        <!-- Modificado: action="/cadastro" e removido onclick -->
+        <form action="/cadastro" method="POST">
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" id="username" name="username" placeholder="Nome Completo" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" name="password" placeholder="Senha" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmar Senha" required>
+            </div>
+
+            <!-- Botão de submit sem a função onclick -->
+            <button type="submit">Cadastrar</button>
+
+        </form>
+        <p class="login-text">Já tem uma conta? <a href="/src/pages/Login/index_login.html">Entrar</a></p>
+    </div>
+</body>
+</html>

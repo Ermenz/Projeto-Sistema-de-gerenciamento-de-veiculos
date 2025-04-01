@@ -1,0 +1,185 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background: url('/src/imgs/BackgrounAplication.AVI');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: color;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    height: 100vh; 
+    
+    
+
+}
+
+/* Borda laranja no topo */
+.top-border {
+    width: 100%;
+    height: 50px; /* Altura da borda */
+    position: absolute;
+    top: -80px;
+    left: 0;
+    z-index: 9999;
+}
+
+/* Ícone de sair dentro da borda */
+.exit-icon {
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    left: 20px; /* Distância da borda esquerda */
+    transform: translateY(-50%); /* Ajuste fino */
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    transition: color 0.3s ease-in-out;
+}
+
+.exit-icon:hover {
+    color: #fff700; /* Amarelo no hover */
+}
+
+/* Container principal */
+.container {
+    max-width: 800px;
+    margin: 80px auto 50px; /* Ajustado para não sobrepor a borda */
+    padding: 20px;
+  
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 15px 30px rgba(255, 140, 0, 0.2);
+    background-color: #FFF3E0; /* Branco com tom alaranjado */
+    border-radius: 10px; /* Bordas arredondadas (opcional) */
+    padding: 20px; /* Espaçamento interno */
+    border: 5px solid rgba(212, 155, 102, 0.3);
+
+   
+}
+
+
+.container::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 12px;
+    padding: 2px;
+    background: linear-gradient(135deg, rgb(177, 98, 7), rgb(163, 91, 8));
+    -webkit-mask:
+        linear-gradient(white 0 0) content-box, 
+        linear-gradient(white 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    background-size: 400%;
+    z-index: -1;
+    transition: all 0.5s ease;
+}
+
+.container:hover::before {
+    background-position: 100% 100%;
+}
+
+/* Títulos */
+h2 {
+    text-align: center;
+    color: #FFD700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Estilo para o formulário */
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.input-group i {
+    position: absolute;
+    left: 10px;
+    color: #bbb;
+}
+
+input {
+    flex: 1;
+    padding: 12px 10px 12px 35px;
+    font-size: 16px;
+    border: 2px solid rgba(0, 0, 0, 0.0);
+    border-radius: 5px;
+    background-color: #e6e3e3;
+    color: rgb(48, 16, 16);
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #FFD700;
+    outline: none;
+    color: #000000; /* Cor do texto quando em foco (exemplo de texto em preto) */
+    background-color: #ffffff; /* Fundo branco quando em foco */
+}
+
+input::placeholder {
+    color: #bbb;
+}
+
+/* Botão principal */
+button {
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(135deg, #bb9106, #6e5017);
+    color: white;
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 20px;
+    transition: transform 0.2s, background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #9b8405, #bbb124);
+    transform: scale(1.02);
+}
+
+/* Botões de ações */
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.action-btn {
+    background: linear-gradient(135deg, #d3840d, #ca9c06);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s ease-in-out;
+}
+
+.action-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #adab06, #b5b808);
+}
+
+/* Lista de carros */
+#lista-carros {
+    margin-top: 20px;
+}
+
+.carro {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #FFF3E0;
+    border-left: 3px solid #1f1e1c;
+    border-right: 3px solid #1f1e1c;
+    border-radius: 6px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    color: rgb(22, 16, 16);
+}
+

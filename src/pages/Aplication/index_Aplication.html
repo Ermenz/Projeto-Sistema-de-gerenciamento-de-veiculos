@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Veículos</title>
+    <link rel="stylesheet" href="/src/pages/Aplication/Style_Aplication.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="top-border">
+        <a href="/src/pages/Login/index_login.html" class="exit-icon">
+            <i class="fas fa-sign-out-alt fa-flip-horizontal"></i>
+        </a>
+    </div>
+
+    <div class="container">
+        <h2>Cadastro de Veículos</h2>
+        <!-- Formulário atualizado para enviar via POST para a rota Flask -->
+        <form id="formVeiculo" method="POST" action="/cadastrar_veiculo">
+            <div class="input-group">
+                <i class="fas fa-car"></i>
+                <input type="text" id="placa" name="placa" placeholder="Placa do Veículo" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-car"></i>
+                <input type="text" id="marca" name="marca" placeholder="Marca do Veículo" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-cogs"></i>
+                <input type="text" id="modelo" name="modelo" placeholder="Modelo do Veículo" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-calendar-alt"></i>
+                <input type="number" id="ano" name="ano" placeholder="Ano do Veículo" required>
+            </div>
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <div class="action-buttons">
+            <button class="action-btn" onclick="listarCarros()">
+                <i class="fas fa-list"></i> Listar Carros
+            </button>
+        </div>
+
+        <div id="lista-carros"></div>
+    </div>
+
+    <script src="/src/services/script_Aplication.js"></script>
+</body>
+</html>

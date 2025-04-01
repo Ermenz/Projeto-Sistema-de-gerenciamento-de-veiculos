@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <link rel="stylesheet" href="/src/pages/Login/style_login.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="left-side">
+            <img src="/src/imgs/logotipofinal.png" alt="Logo" class="logo">
+            <p>Bem-vindo!</p>
+        </div>
+        <div class="right-side">
+            <h2>Login</h2>
+            <form action="/login" method="POST">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="username" name="username" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" name="password" placeholder="Senha" required>
+                </div>
+                <div class="input-group">
+                    <button type="submit">Entrar</button>
+                </div>
+            </form>
+            <p class="register-text">Não tem uma conta? <a href="/src/pages/SignUp/index_cadastrar.html">Cadastre-se</a></p>
+            <p class="forgot-password"><a href="/src/pages/ForgetPassoword/index_forget.html">Esqueci a senha</a></p>
+        </div>
+    </div>
+    <div class="footer-links">
+        <a href="#">Ajuda</a>
+        <a href="#">Privacidade</a>
+        <a href="#">Termos</a>
+    </div>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            window.location.href = "/src/pages/Aplication/index_Aplication.html";
+        }
+    </script>
+</body>
+</html>

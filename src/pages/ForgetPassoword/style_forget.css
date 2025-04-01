@@ -1,0 +1,134 @@
+body {
+
+    /*parte de fora*/
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('/src/imgs/BackgroundSignForget.png');
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.logo {
+    margin-top: -120px;
+    width: 200px; 
+    height: auto;
+}
+
+/*container esqueci senha*/
+
+.forget-passoword-container {
+    background: linear-gradient(to bottom, #ffcc00, #ff6600); 
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(92, 51, 51, 0.5);
+    text-align: center;
+    width: 400px;
+    margin-top: 40px;
+    
+}
+
+h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+
+::placeholder {
+    color: rgba(15, 6, 6, 0.7);
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background: #faf5f5;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.input-group i {
+    color: white;
+    margin-right: 10px;
+}
+
+.input-group input {
+    border: none;
+    background: transparent;
+    outline: none;
+    color: rgb(0, 0, 0);
+    width: 75%;
+    padding: 10px;
+}
+
+.input-group button {
+    border: none;
+    background: #ff6600;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.input-group button:hover {
+    background: #cc5200;
+}
+
+.success-message {
+    color: #f7f4f3;
+    margin-top: 15px;
+    font-size: 16px;
+    display: block;
+}
+
+.back-button {
+    margin-top: 20px;
+    padding: 10px 10px;
+    background: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(92, 51, 51, 0.5);
+}
+
+.back-button:hover {
+    background:#cc5200;
+}
+
+/*Responsividade para telas mobile*/
+
+@media (max-width: 600px) {
+    .forget-passoword-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .logo {
+        width: 100px; 
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .input-group button {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .back-button {
+        padding: 12px;
+    }
+}
