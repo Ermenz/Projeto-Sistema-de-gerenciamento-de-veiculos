@@ -13,7 +13,8 @@
 
     <div class="forget-passoword-container">
         <h2>Esqueci a Senha</h2>
-        <form action="#" method="POST">
+        <!-- Corrigido o action para enviar para a rota correta -->
+        <form action="/esqueci-senha" method="POST">
             <div class="input-group">
                 <i class="fas fa-envelope"></i>
                 <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
@@ -21,7 +22,7 @@
             </div>
         </form>
         <!-- Simulando a mensagem de sucesso -->
-        <p class="success-message">Formulário de redefinição de email enviado.</p>
+        <p class="success-message">Formulário de redefinição de e-mail enviado.</p>
         <!-- Botão para voltar ao login -->
         <a href="/src/pages/Login/index_login.html" class="back-button">Voltar ao Login</a>
     </div>

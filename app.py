@@ -39,6 +39,10 @@ def login_post():
         flash('Credenciais inválidas!', 'error')
         return redirect(url_for('login'))
 
+@app.route('/aplicacao')
+def aplicacao():
+    return render_template('Aplication/index_aplication.html')
+
 @app.route('/esqueci-senha', methods=['GET', 'POST'])
 def esqueci_senha():
     if request.method == 'POST':
