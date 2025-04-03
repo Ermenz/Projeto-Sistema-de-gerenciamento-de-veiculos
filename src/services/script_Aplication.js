@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:5000";  // Altere para o endereço correto do seu Flask
+const apiUrl = "http://localhost:5000";  // Endereço do servidor Flask
 
 // Função para adicionar um veículo
 async function adicionarCarro() {
@@ -12,18 +12,16 @@ async function adicionarCarro() {
         return;
     }
 
-    const user_id = 1;  // Substitua com o user_id do usuário logado
-
-    const response = await fetch(`${apiUrl}/api/adicionar_veiculo`, {
+    const response = await fetch(`${apiUrl}/cadastrar_veiculo`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ placa, marca, modelo, ano, user_id })
+        body: JSON.stringify({ placa, marca, modelo, ano })
     });
 
     const data = await response.json();
 
     if (response.ok) {
-        alert(data.message);
+        alert("Veículo cadastrado com sucesso!");
         listarCarros();  // Atualizar a lista de carros após o cadastro
     } else {
         alert("Erro ao cadastrar veículo: " + data.message);
@@ -32,9 +30,7 @@ async function adicionarCarro() {
 
 // Função para listar os veículos
 async function listarCarros() {
-    const user_id = 1;  // Substitua com o user_id do usuário logado
-
-    const response = await fetch(`${apiUrl}/api/listar_veiculos?user_id=${user_id}`);
+    const response = await fetch(`${apiUrl}/listar_veiculos`);
     const veiculos = await response.json();
 
     const listaCarros = document.getElementById("lista-carros");
