@@ -10,7 +10,6 @@
 <body>
     <div class="cadastro-container">
         <h2>Cadastro</h2>
-        <!-- Modificado: action="/cadastro" e removido onclick -->
         <form action="/cadastro" method="POST">
             <div class="input-group">
                 <i class="fas fa-user"></i>
@@ -28,12 +27,9 @@
                 <i class="fas fa-lock"></i>
                 <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmar Senha" required>
             </div>
-
-            <!-- Botão de submit sem a função onclick -->
             <button type="submit">Cadastrar</button>
-
         </form>
-        <p class="login-text">Já tem uma conta? <a href="/src/pages/Login/index_login.html">Entrar</a></p>
+        <p class="login-text">Já tem uma conta? <a href="/">Entrar</a></p>
     </div>
 </body>
 </html>
